@@ -8,7 +8,7 @@ const SignIn = () => {
   return (
     <>
       <div className='container mx-auto'>
-        <div className='flex flex-col items-center justify-center w-full max-w-lg mx-auto space-y-2'>
+        <div className='w-full max-w-lg mx-auto space-y-2'>
           <div className='flex justify-between gap-2'>
             <SocialButton
               icon={
@@ -58,7 +58,7 @@ const SignIn = () => {
             <div className='inline-block px-2 text-sm font-medium leading-none tracking-wide text-gray-600 transform translate-y-1/2 bg-white'>OR</div>
           </div>
           <SignInForm />
-          <p className='text-sm text-slate-700'>
+          <p className='text-sm text-center text-slate-700'>
             Don't have an account yet?{' '}
             <span role='button' onClick={() => navigate('/auth/sign-up')} className='font-bold text-blue-600'>
               Sign Up

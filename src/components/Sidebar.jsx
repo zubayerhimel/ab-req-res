@@ -8,9 +8,9 @@ export function Sidebar({ className, items, ...props }) {
 
   return (
     <div>
-      <img src={logo} className='w-auto h-auto' alt='logo' />
+      <img src={logo} className='w-auto h-auto mt-4' alt='logo' />
 
-      <nav className={cn('flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1', className)} {...props}>
+      <nav className={cn('flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1 mt-8', className)} {...props}>
         <span className='text-sm text-slate-500'>Pages</span>
         {items.map((item) => (
           <Link

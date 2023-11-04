@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Bell, LayoutDashboard, User } from 'lucide-react';
+import { Bell, LayoutDashboard, Search, User } from 'lucide-react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -29,7 +29,7 @@ const AuthenticatedLayout = () => {
     if (!token) {
       navigate('/auth/sign-in');
     }
-  }, [token, dispatch]);
+  }, [token, dispatch, navigate]);
 
   return (
     <>
@@ -38,9 +38,14 @@ const AuthenticatedLayout = () => {
           <aside className='px-5 -mx-4 lg:w-1/5'>
             <Sidebar items={sidebarNavItems} />
           </aside>
-          <div className='flex-1 p-2 min-h-[98vh] border-l'>
-            <div className='flex items-center h-16 px-4'>
-              hello
+          <div className='flex-1 min-h-screen p-2 border-l'>
+            <div className='flex items-center h-16 px-4 mb-10'>
+              <div class='relative w-[500px]'>
+                <div class='absolute inset-y-0 right-4 flex items-center pl-3 pointer-events-none'>
+                  <Search className='w-4 h-4 text-slate-500' />
+                </div>
+                <input type='search' id='default-search' class='block w-full p-4 pl-4 text-sm text-gray-900 border rounded-2xl bg-slate-100' placeholder='Search' required />
+              </div>
               <div className='flex items-center ml-auto space-x-4'>
                 <Bell className='w-5 h-5 text-slate-500' />
                 <div role='button' className='overflow-hidden rounded-full' onClick={() => dispatch(logout())}>

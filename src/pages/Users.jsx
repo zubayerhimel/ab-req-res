@@ -77,8 +77,7 @@ const Users = () => {
       <nav aria-label='Page navigation example'>
         <ul className='flex items-center h-8 gap-1 mt-4 text-sm'>
           <li>
-            <a
-              href='#'
+            <button
               className={cn(
                 'flex items-center justify-center h-8 px-1 ml-0 text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700',
                 currentPage === 1 && 'pointer-events-none hover:cursor-not-allowed'
@@ -86,24 +85,22 @@ const Users = () => {
               onClick={onPrevious}>
               <span className='sr-only'>Previous</span>
               <ChevronLeft />
-            </a>
+            </button>
           </li>
           {pages?.map((page) => (
             <li key={page} onClick={() => setCurrentPage(page)}>
-              <a
-                href='#'
+              <button
                 className={cn(
                   'flex items-center justify-center px-3 h-8 rounded-lg text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700',
-                  data?.page === page && 'bg-blue-700 text-white'
+                  data?.page === page && 'bg-blue-600 text-white'
                 )}>
                 {page}
-              </a>
+              </button>
             </li>
           ))}
 
           <li>
-            <a
-              href='#'
+            <button
               className={cn(
                 'flex items-center justify-center h-8 px-1 ml-0 text-gray-500 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 hover:text-gray-700',
                 currentPage === data?.total_pages && 'pointer-events-none cursor-not-allowed'
@@ -111,7 +108,7 @@ const Users = () => {
               onClick={onNext}>
               <span className='sr-only'>Next</span>
               <ChevronRight />
-            </a>
+            </button>
           </li>
         </ul>
       </nav>
