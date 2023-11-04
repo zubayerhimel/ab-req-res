@@ -40,8 +40,8 @@ const AuthenticatedLayout = () => {
           </aside>
           <div className='flex-1 min-h-screen p-2 border-l'>
             <div className='flex items-center h-16 px-4 mb-10'>
-              <div class='relative w-[500px]'>
-                <div class='absolute inset-y-0 right-4 flex items-center pl-3 pointer-events-none'>
+              <div className='relative w-[500px]'>
+                <div className='absolute inset-y-0 flex items-center pl-3 pointer-events-none right-4'>
                   <Search className='w-4 h-4 text-slate-500' />
                 </div>
                 <input type='search' id='default-search' class='block w-full p-4 pl-4 text-sm text-gray-900 border rounded-2xl bg-slate-100' placeholder='Search' required />

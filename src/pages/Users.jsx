@@ -10,9 +10,9 @@ const Users = () => {
   const { data, isLoading } = useGetUserListQuery(currentPage);
 
   useEffect(() => {
+    // making array from number to populate the pagination number
     if (data) {
       const pages = [...Array(data?.total_pages + 1).keys()].slice(1);
-      console.log(pages);
       setPages(pages);
     }
   }, [data]);
