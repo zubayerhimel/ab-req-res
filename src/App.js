@@ -11,7 +11,7 @@ function App() {
     <Suspense
       fallback={
         <div className='flex items-center justify-center h-full'>
-          <Loader className='w-12 h-12' />
+          <Loader className='w-12 h-12 animate-spin' />
         </div>
       }>
       <Toaster />
